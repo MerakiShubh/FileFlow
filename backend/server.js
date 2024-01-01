@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 import connectDB from "./db/index.js";
 import router from "./routes/files.js";
 import router1 from "./routes/show.js";
+import router2 from "./routes/download.js";
 import express from "express";
 import { app } from "./app.js";
 import path from "path";
@@ -30,3 +31,4 @@ app.set("view engine", "ejs");
 
 app.use("/api/files", router);
 app.use("/files", router1);
+app.use("/files/download", router2);
